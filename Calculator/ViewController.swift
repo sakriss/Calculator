@@ -12,6 +12,7 @@ enum modes {
     case not_set
     case addition
     case subtraction
+    case multiplication
 }
 
 class ViewController: UIViewController {
@@ -42,6 +43,10 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func didPressMultiply(_ sender: Any) {
+        changeMode(newMode: .multiplication)
+    }
+    
     @IBAction func didPressEquals(_ sender: Any) {
         guard let labelInt:Int = Int(labelString) else {
             return
@@ -55,6 +60,10 @@ class ViewController: UIViewController {
         else if (currentMode == .subtraction){
             savedNum -= labelInt
         }
+        else if (currentMode == .multiplication){
+            savedNum *= labelInt
+        }
+        
         currentMode = .not_set
         labelString = "\(savedNum)"
         updateText()

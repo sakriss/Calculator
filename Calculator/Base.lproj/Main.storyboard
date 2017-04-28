@@ -132,6 +132,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ghp-rK-l0c"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMd-Ch-mIq">
                                 <rect key="frame" x="188" y="387.5" width="92.5" height="138.5"/>
